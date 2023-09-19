@@ -1,0 +1,150 @@
+html{
+    background-color: #f3eae3;
+    display: flex;
+align-items: center;
+    justify-content: center;
+}
+
+card{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: inherit;
+    grid-template-areas: "catimage catdesc";
+    max-width: 850px; 
+    max-height: 637px; /*this solution causes many problems, I will not use it in the future. But now i need to learn... */
+    background-color: white;
+    border-radius: 1em;
+}
+#CategoryImage{
+    grid-area:catimage;
+  
+}
+img{
+    max-width:100%;
+    border-radius:1em 0em 0em 1em;
+}
+
+#CategoryDescription{
+    grid-area: catdesc;
+    padding-top:2rem;
+    padding-left:2.7rem;
+    padding-right:2.7rem;
+    padding-bottom:1rem;
+    color:#767789;
+    font-size: 1.1rem;
+   
+}
+.description{
+    line-height: 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.categoryName{
+    text-transform: uppercase;
+    letter-spacing: 0.6em;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.attribution{
+    visibility: hidden;
+}
+h1{
+    color:#1e252b;
+   
+font-family: 'Fraunces', serif,'Montserrat', sans-serif,'Tilt Prism', cursive;
+
+    font-weight: 700;
+    font-size: 2.7em;
+    
+}
+button{
+    background-color: #3d8168;
+    border-radius: 0.5em;
+    color:white;
+    width:20em;
+    height: 3.2em;
+    padding:0.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   margin-top:0.7em;
+    border:none;
+    font-size:1em;
+   
+}
+button span{
+    font-size:5.5em;
+}
+priceAmount{
+    display: flex;
+    flex-direction: row;
+
+}
+.ActualPrice{
+    display: inline;
+    color:#3d8168;
+    font-size:2.7em;
+    padding-right: 1em;
+    font-family: 'Fraunces', serif,'Montserrat', sans-serif, 'Tilt Prism', cursive;
+    
+
+    margin:0;
+    
+
+}
+.PreviousPrice{
+    display:inline;
+    text-decoration: line-through;
+    align-self:center;
+    font-family: 'Fraunces', serif,'Montserrat', sans-serif,'Tilt Prism', cursive;
+
+
+}
+.material-icons {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    padding-right: 0.5em;
+  }
+
+
+button:hover{
+background-color: #1a4031;
+cursor:pointer;
+
+}
+button:focus{
+    background-color: #1a4031;
+    cursor:pointer;
+}
+
+@media(max-width:480px){
+    card {
+        display: grid;
+        grid-template-columns: 100%;
+       /* grid-template-rows:auto auto;*/
+       grid-auto-rows: auto;
+        grid-template-areas: "catim"
+         "catd";
+    max-height: fit-content;
+  }
+  #CategoryImage{
+    grid-area:catim; /*Unfortunatelly the image swap not working. I tryed much resolutions. I don't understand. I need to jump another project now...*/
+
+}
+#CategoryDescription{
+    grid-area:catd;
+}
+  html {
+    font-size: 10px; /* Példa: A szöveg mérete 16px-re változtatható */
+}
+    .description{
+        font-size:17px;
+    }
+    button{
+        width: 350px;
+        height:40px ;
+        font-size: 13px;
+    }
+}
+

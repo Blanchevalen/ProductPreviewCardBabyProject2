@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="FrontendMentor Product preview card with grid, responsive image">
+  <meta name="keywords" content="simple grid, responsive images">
+  <meta name="author" content="Frontend Mentor project with Tipi Henriett code">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&family=Tilt+Prism&display=swap" rel="stylesheet">  
+<title>Frontend Mentor | Product preview card component</title>
+  <!--Google icon-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="productPrewCard.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body> <!--I will use CLASS selector, because in a real project, these elements are repeated.-->
+<card>
+  <section id="CategoryImage">
+   
+    <img
+      srcset="image-product-mobile.jpg 480w, image-product-desktop.jpg 600w"
+      sizes="(max-width: 480px) 480px, 600px"
+      src="image-product-desktop.jpg"
+      alt="Chanel parfum image" 
+      title="Chanel parfum image">
+    
+  </section>
+
+  <section id="CategoryDescription">
+    <p class="categoryName">Perfume</p> <!--How can i use the semantic HTML in this case?-->
+
+    <h1>Gabrielle Essence Eau De Parfum</h1>
+
+    <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.</p>
+      <priceAmount>
+        <p class="ActualPrice">$149.99</p>
+         <p class="PreviousPrice">$169.99</p>
+      </priceAmount>
+    <button class="AddToCart">
+    <i class="material-icons">shopping_cart</i> Add to Cart</button>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Tipi Henriett</a>.
+    </div>
+  </section>
+
+    
+  </card>
+</body>
+</html>
